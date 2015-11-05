@@ -20,6 +20,12 @@ RSpec.describe User, type: :model do
     expect(user).not_to be_valid
   end
 
+  it 'is invalid without a 5+ character password' do
+    user.password = '1234'
+
+    expect(user).not_to be_valid
+  end
+
   it 'is invalid without a unique username' do
     user.save
     expect(user).to be_valid
