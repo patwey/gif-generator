@@ -297,3 +297,536 @@
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:34:39.019813"], ["updated_at", "2015-11-05 21:34:39.019813"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$aZb.vc1h0PMobMz.VwaDQepfqMmv8t3z91syse.w4ErfP6u1UXdSK"], ["created_at", "2015-11-05 21:41:13.358034"], ["updated_at", "2015-11-05 21:41:13.358034"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 6) LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:41:13.366988"], ["updated_at", "2015-11-05 21:41:13.366988"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$GMR/6.P4.mMkuFU.qAtjx.U36S2.pzAMsAJwWeMyh3H/g6ck4XoMC"], ["created_at", "2015-11-05 21:42:25.637798"], ["updated_at", "2015-11-05 21:42:25.637798"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 7) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:42:25.645072"], ["updated_at", "2015-11-05 21:42:25.645072"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$F0e1evCwMigI2A03jXbhX.vdg6yP9SjRWgzqXSqGm3faoyZQnzjGu"], ["created_at", "2015-11-05 21:43:18.962711"], ["updated_at", "2015-11-05 21:43:18.962711"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 8) LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:43:18.971569"], ["updated_at", "2015-11-05 21:43:18.971569"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$bZUzGnatK8uqNt2kmbBVwOZWOAp4NR297XkSuIjk2mzO9aWpyuhTC"], ["created_at", "2015-11-05 21:43:44.257262"], ["updated_at", "2015-11-05 21:43:44.257262"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 9) LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:43:44.267603"], ["updated_at", "2015-11-05 21:43:44.267603"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$CIFvXsVR2727sNjFsHZGCeeuWCwPjcbGtODi5sM8N5rrR5n4G15gi"], ["created_at", "2015-11-05 21:44:05.736749"], ["updated_at", "2015-11-05 21:44:05.736749"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 10) LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:44:05.744661"], ["updated_at", "2015-11-05 21:44:05.744661"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$GzvNn94hCoa88YipoI1nKeCrnbDE1uXDOnxYagbFS1mkeXwfJEgmS"], ["created_at", "2015-11-05 21:44:31.318927"], ["updated_at", "2015-11-05 21:44:31.318927"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 11) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:44:31.326286"], ["updated_at", "2015-11-05 21:44:31.326286"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$6jyDoSWN9AKXBpgANJko8u7joP4XlIuXmrkfXbGNZE3FGWsNrh7CC"], ["created_at", "2015-11-05 21:44:49.158098"], ["updated_at", "2015-11-05 21:44:49.158098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 12) LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:44:49.167437"], ["updated_at", "2015-11-05 21:44:49.167437"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:48:18.112461"], ["updated_at", "2015-11-05 21:48:18.112461"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Matt"], ["password_digest", "$2a$04$0oKs9h50HORb4uHZskzGbux7bD/qvsTmTe4uz0NWuAtNRv5DHcSZG"], ["created_at", "2015-11-05 21:48:18.150228"], ["updated_at", "2015-11-05 21:48:18.150228"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 13) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:48:18.158959"], ["updated_at", "2015-11-05 21:48:18.158959"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:49:01.268200"], ["updated_at", "2015-11-05 21:49:01.268200"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$Xp2uE2bc8swII0e7kNwM5Ou79CBj6RxduGdO8o3eraN0usy0adad2"], ["created_at", "2015-11-05 21:49:01.291653"], ["updated_at", "2015-11-05 21:49:01.291653"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 14) LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'Sushi Cat' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:49:01.300700"], ["updated_at", "2015-11-05 21:49:01.300700"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:50:07.120425"], ["updated_at", "2015-11-05 21:50:07.120425"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:50:07.126108"], ["updated_at", "2015-11-05 21:50:07.126108"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat2' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$Ole6r39pWMs968fVOqiGo.F8ZtfiJo7jedbsKXHx4HkZeeFLv5lvq"], ["created_at", "2015-11-05 21:50:07.155445"], ["updated_at", "2015-11-05 21:50:07.155445"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 15) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'Sushi Cat' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:50:07.163307"], ["updated_at", "2015-11-05 21:50:07.163307"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.4ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" IS NULL LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:50:28.445958"], ["updated_at", "2015-11-05 21:50:28.445958"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'age/path' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:50:28.453161"], ["updated_at", "2015-11-05 21:50:28.453161"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat2' LIMIT 1[0m
+  [1m[35mGif Exists (0.7ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$gndx85a0c11fOhOZE7qVIeH3gWEOwxu1fBvRy1ifozHZw1FdVx50G"], ["created_at", "2015-11-05 21:50:28.475878"], ["updated_at", "2015-11-05 21:50:28.475878"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 16) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'Sushi Cat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'sushicat.com/sushicat1' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:50:28.483789"], ["updated_at", "2015-11-05 21:50:28.483789"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" IS NULL LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:56:30.098616"], ["updated_at", "2015-11-05 21:56:30.098616"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'age/path' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.4ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:56:30.107896"], ["updated_at", "2015-11-05 21:56:30.107896"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat2' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Pat' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Pat"], ["password_digest", "$2a$04$ps8L8EA4JtGBfmT9GklmJOW3NNMgqow7NA/hEHKtOsO4KPyVtrsMG"], ["created_at", "2015-11-05 21:56:30.119640"], ["updated_at", "2015-11-05 21:56:30.119640"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$Gyp1L3/RWo7pMyp2a3zfI.uiMjs9Q9uQ6x0Aw0rE9NMCizdQFvuZq"], ["created_at", "2015-11-05 21:56:30.134972"], ["updated_at", "2015-11-05 21:56:30.134972"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 18) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'Sushi Cat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'sushicat.com/sushicat1' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:56:30.142597"], ["updated_at", "2015-11-05 21:56:30.142597"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" IS NULL LIMIT 1[0m
+  [1m[35mGif Exists (0.4ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:57:10.400112"], ["updated_at", "2015-11-05 21:57:10.400112"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mGif Exists (0.4ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'age/path' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGif Exists (0.3ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat' LIMIT 1[0m
+  [1m[35mGif Exists (0.5ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "sushicat"], ["image_path", "image/path"], ["category_id", 1], ["created_at", "2015-11-05 21:57:10.409422"], ["updated_at", "2015-11-05 21:57:10.409422"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'sushicat2' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'image/path' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Pat' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Pat"], ["password_digest", "$2a$04$FB4M.dDnq/MyVMHcz7jiN.75oW.X0xlb4Wy91bv0sl7A0rM/sRlKS"], ["created_at", "2015-11-05 21:57:10.420908"], ["updated_at", "2015-11-05 21:57:10.420908"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Matt"], ["password_digest", "$2a$04$f5yU01meelobGqi4o/99Bea2iBdah9WtSEbjkS2BxHz96NYfojmye"], ["created_at", "2015-11-05 21:57:10.456487"], ["updated_at", "2015-11-05 21:57:10.456487"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt' AND "users"."id" != 20) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mGif Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = 'Sushi Cat' LIMIT 1[0m
+  [1m[35mGif Exists (0.2ms)[0m  SELECT  1 AS one FROM "gifs" WHERE "gifs"."image_path" = 'sushicat.com/sushicat1' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("title", "image_path", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sushi Cat"], ["image_path", "sushicat.com/sushicat1"], ["category_id", 1], ["created_at", "2015-11-05 21:57:10.464078"], ["updated_at", "2015-11-05 21:57:10.464078"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
