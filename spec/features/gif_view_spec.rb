@@ -9,7 +9,7 @@ describe 'the gifs view', :type => :feature do
     piglet = Category.create(name: 'Piglet')
     piglet.gifs.create(image_path: 'winniethepoo.org/piglet')
 
-    visit '/gifs'
+    visit gifs_path
 
     within('.categories') do
       expect(page).to have_content('Sushicat')
