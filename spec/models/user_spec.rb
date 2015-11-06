@@ -35,11 +35,10 @@ RSpec.describe User, type: :model do
   end
 
   it 'responds with its favorited gifs' do
-    gif = Gif.create(title: 'Sushi Cat',
-                     image_path: 'sushicat.com/sushicat1',
+    gif = Gif.create(image_path: 'sushicat.com/sushicat1',
                      category_id: 1)
     user.gifs << gif
 
-    expect(user.gifs.map(&:title)).to eq(['Sushi Cat'])
+    expect(user.gifs.map(&:image_path)).to eq(['sushicat.com/sushicat1'])
   end
 end
