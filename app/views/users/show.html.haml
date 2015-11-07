@@ -1,0 +1,8 @@
+%h1 Favorites
+
+- if @user
+  .favorites
+    - @user.gifs.each do |gif|
+      %h3= gif.category.name
+
+      = image_tag gif.image_path
