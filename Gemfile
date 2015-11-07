@@ -19,6 +19,7 @@ group :development, :test do
   gem 'pry'
   gem 'byebug'
   gem 'launchy'
+  gem 'rspec-mocks'
 end
 
 group :development do
