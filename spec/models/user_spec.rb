@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   let(:user) { User.new(username: 'Matt', password: 'password') }
+  let(:admin) { User.new(username: 'admin', password: 'admin_password', role: 1) }
 
   it 'is valid' do
     expect(user).to be_valid
@@ -40,5 +41,9 @@ RSpec.describe User, type: :model do
     user.gifs << gif
 
     expect(user.gifs.map(&:image_path)).to eq(['sushicat.com/sushicat1'])
+  end
+
+  it 'is valid with an admin role' do
+    expect(admin).to be_valid
   end
 end

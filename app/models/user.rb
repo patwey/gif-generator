@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 5 }
   has_many :favorites
   has_many :gifs, through: :favorites
+
+  enum role: %w(default admin)
 end
