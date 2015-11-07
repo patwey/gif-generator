@@ -16,12 +16,30 @@ describe 'the favoriting process', :type => :feature do
     pat = User.find_by(username: 'Pat')
     visit gifs_path
 
+
     within '.categories' do
       within '#Sushicat' do
-        click_button '#favorite_gif_1'
+        click_button 'Favorite'
       end
     end
 
     expect(pat.gifs.map(&:image_path)).to eq(['sushicat.io/sushicat'])
+  end
+
+  it 'does not allow a user to favorite the same gif twice' do
+    pat = User.find_by(username: 'Pat')
+    visit gifs_path
+
+    within '.categories' do
+      within '#Sushicat' do
+        click_button 'Favorite'
+      end
+    end
+
+    within '.categories' do
+      within '#Sushicat' do
+        expect(page).not_to have_content 'Favorite'
+      end
+    end
   end
 end

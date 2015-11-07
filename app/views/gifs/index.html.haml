@@ -1,5 +1,12 @@
 .categories
   - @categories.each do |category|
-    %h3= category.name
-    - category.gifs.each do |gif|
-      = image_tag gif.image_path
+    %div{id: "#{category.name}"}
+      %h3= category.name
+
+      - category.gifs.each do |gif|
+        = image_tag gif.image_path
+
+        - if current_user && current_user.gifs.exclude?(gif)
+          = form_for(:favorite, url: user_favorites_path(current_user)) do |f|
+            = f.hidden_field :gif_id, :value => gif.id
+            = f.submit 'Favorite'
