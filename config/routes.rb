@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show] do
     resources :favorites, only: [:create]
+    delete '/favorites', to: 'favorites#destroy'
   end
   resources :gifs, only: [:index]
   get '/login', to: 'sessions#new'

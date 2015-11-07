@@ -62,4 +62,19 @@ describe 'the favoriting process', :type => :feature do
     end
   end
 
+  it 'allows users to unfavorite their favorited gifs' do
+    pat = User.find_by(username: 'Pat')
+
+    favorite_sushicat
+
+    visit user_path pat
+
+    within '.favorites' do
+      expect(page).to have_content 'Sushicat'
+      click_button 'Unfavorite'
+    end
+
+    expect(current_path).to eq(user_path pat)
+    expect(page).not_to have_content 'Sushicat'
+  end
 end

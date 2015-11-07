@@ -1,8 +1,12 @@
 %h1 Favorites
 
-- if @user
+- if @user && @user.gifs
   .favorites
     - @user.gifs.each do |gif|
       %h3= gif.category.name
 
       = image_tag gif.image_path
+
+      = form_for :unfavorite, url: user_favorites_path(@user), method: :delete do |f|
+        = f.hidden_field :gif_id, :value => gif.id
+        = f.submit 'Unfavorite'
