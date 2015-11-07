@@ -37,7 +37,6 @@ describe "the gif admin process", type: :feature do
     within '.categories' do
       expect(page).to have_content "sushi cat"
     end
-    save_and_open_page
   end
 
 end
