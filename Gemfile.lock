@@ -189,6 +189,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 4.2.4)
+  rspec-mocks
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
