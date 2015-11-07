@@ -25,8 +25,19 @@ describe "the gif admin process", type: :feature do
     expect(page).to have_content "The page you were looking for doesn't exist"
   end
 
-  it 'allows a logged in admin to add a gif to the database' do
-    
+  it 'allows a logged in admin to search for and add a gif to the database' do
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+    visit new_admin_gif_path
+
+    fill_in "Name", with: "sushi cat"
+    click_button "Generate gif"
+
+    expect(page).to have_content "All Gifs"
+
+    within '.categories' do
+      expect(page).to have_content "sushi cat"
+    end
+    save_and_open_page
   end
 
 end
