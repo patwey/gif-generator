@@ -1,1 +1,10 @@
-%h1 All Gifs 
+%h1 All Gifs
+
+- if @categories
+  .categories
+    - @categories.each do |category|
+      %div{id: "#{category.name}"}
+        %h3= category.name
+
+        - category.gifs.each do |gif|
+          = image_tag gif.image_path
