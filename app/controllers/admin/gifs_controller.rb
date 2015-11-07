@@ -1,4 +1,5 @@
 class Admin::GifsController < Admin::BaseController
+
   def index
     @categories = Category.all
   end
@@ -15,6 +16,14 @@ class Admin::GifsController < Admin::BaseController
       flash[:notice] = "No gif available with that name"
       render :new
     end
+  end
+
+  def destroy
+    gif = Gif.find(params[:gif_to_delete][:gif_id])
+    category = gif.category
+    Gif.delete(gif.id)
+    Category.delete(category.id) if category.gifs.empty?
+    redirect_to admin_gifs_path
   end
 
 end

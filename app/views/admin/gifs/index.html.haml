@@ -8,3 +8,6 @@
 
         - category.gifs.each do |gif|
           = image_tag gif.image_path
+          = form_for :gif_to_delete, url: admin_gif_path(gif), method: :delete do |f|
+            = f.hidden_field :gif_id, :value => gif.id
+            = f.submit "Delete"
